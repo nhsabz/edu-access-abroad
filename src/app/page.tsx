@@ -37,31 +37,32 @@ export default function Home() {
           </div>
           <div className="relative h-[600px] hidden lg:block">
             {/* Floating UI Cards */}
-            <div className="absolute top-10 right-10 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.08)] z-20 w-72 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
+            <div className="absolute top-8 right-4 lg:right-8 bg-surface-container-lowest p-5 lg:p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.12)] z-20 w-64 lg:w-72 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-[#26D367]/10 rounded-full flex items-center justify-center text-[#26D367]">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#26D367]/10 rounded-full flex items-center justify-center text-[#26D367] shrink-0">
                   <span className="material-symbols-outlined">check_circle</span>
                 </div>
                 <div>
-                  <div className="font-bold text-on-background">Application Accepted</div>
-                  <div className="text-sm text-on-surface-variant">University of Oxford</div>
+                  <div className="font-bold text-on-background text-sm lg:text-base">Application Accepted</div>
+                  <div className="text-xs lg:text-sm text-on-surface-variant">University of Oxford</div>
                 </div>
               </div>
               <div className="w-full bg-surface-container h-2 rounded-full overflow-hidden">
                 <div className="w-full h-full bg-[#26D367]"></div>
               </div>
             </div>
-            <div className="absolute bottom-20 left-0 bg-surface-container-lowest p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.08)] z-20 w-80 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
-              <div className="font-bold text-on-background mb-2">Upcoming Interview</div>
-              <div className="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
-                <span className="material-symbols-outlined text-base">calendar_today</span>
+            
+            <div className="absolute bottom-8 left-4 lg:left-8 bg-surface-container-lowest p-5 lg:p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.12)] z-20 w-64 lg:w-80 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
+              <div className="font-bold text-on-background mb-2 text-sm lg:text-base">Upcoming Interview</div>
+              <div className="flex items-center gap-2 text-on-surface-variant text-xs lg:text-sm mb-4">
+                <span className="material-symbols-outlined text-sm lg:text-base">calendar_today</span>
                 Oct 24, 10:00 AM EST
               </div>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary">
-                  <span className="material-symbols-outlined">video_camera_front</span>
+                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
+                  <span className="material-symbols-outlined text-sm lg:text-base">video_camera_front</span>
                 </div>
-                <div className="text-sm">Visa Prep Session</div>
+                <div className="text-xs lg:text-sm">Visa Prep Session</div>
               </div>
             </div>
             {/* Hero Image */}
@@ -79,7 +80,7 @@ export default function Home() {
 
       {/* Services Section */}
       <section className="bg-surface-container-low py-xl">
-        <div className="max-w-[1280px] mx-auto px-8">
+        <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8">
           <div className="text-center mb-16">
             <h2 className="font-h2 text-h2 text-on-background mb-4">Comprehensive Services</h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">From initial counseling to your first day on campus, we provide end-to-end support for your international education.</p>
