@@ -3,13 +3,13 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDIDM9VJ_ib1xxLcKKfBZcmSimS0-0zskg",
-  authDomain: "edu-access-abroad.firebaseapp.com",
-  projectId: "edu-access-abroad",
-  storageBucket: "edu-access-abroad.firebasestorage.app",
-  messagingSenderId: "399857564583",
-  appId: "1:399857564583:web:fbde0b44b15786da819482",
-  measurementId: "G-KB11481YQW"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+  measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
 };
 
 const app = getApps().length ? getApps()[0] : initializeApp(firebaseConfig);
