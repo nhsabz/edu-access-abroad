@@ -3,12 +3,12 @@ import { LeadForm } from '@/components/ui/LeadForm';
 export default function ServicesPage() {
   return (
     <>
-      <section className="mb-xl relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,51,102,0.08)] mt-12 mx-8 max-w-[1280px] xl:mx-auto">
+      <section className="mb-xl relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,51,102,0.08)] mt-12 mx-4 sm:mx-8 max-w-[1280px] xl:mx-auto">
         <div className="absolute inset-0 z-0">
           <img alt="" className="w-full h-full object-cover opacity-[0.03] grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByAD2M28AShnqymCt1FjshCJLoOE5-LtUTLBzvf6iN7hdjN51PbM757zAaj_iet57q7hHCH4zngwq5KbaeTDRe3O3Haa7WiQXiMH2ltLxbNOw4yM8pwYwdEAtjsXuTjbYxG7J-YhBhS5Tk4RFNUglJIuvU1AA5h_rBYnMkMfgLy5JzSNg3Yw-4q2bZtvaWtWNozMjVG3e6CFYV7OHw_iE4jyAuYyqtL8ZS6qvq77euqDgOVWNbnefclDeauPlrnlpflbr95hkYUK5r"/>
           <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/90 to-transparent"></div>
         </div>
-        <div className="relative z-10 p-12 md:p-16 max-w-3xl">
+        <div className="relative z-10 p-8 sm:p-12 md:p-16 max-w-3xl">
           <h1 className="font-h1 text-h1 text-on-background mb-4">Our Services</h1>
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
             Navigate your global education journey with clarity and confidence. Our comprehensive suite of services is designed to streamline every step, from initial counseling to your final visa approval.
@@ -16,7 +16,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative max-w-[1280px] mx-auto px-8 mb-xl">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative max-w-[1280px] mx-auto px-4 sm:px-8 mb-xl">
         <div className="lg:col-span-8 space-y-lg">
           {/* Service 1 */}
           <article className="bg-surface-container-lowest rounded-xl p-8 shadow-[0px_4px_20px_rgba(0,51,102,0.08)] border border-transparent hover:border-secondary-fixed/50 transition-all duration-300 group" id="counseling">

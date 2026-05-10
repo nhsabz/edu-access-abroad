@@ -9,18 +9,18 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative max-w-[1280px] mx-auto px-8 py-xl overflow-hidden landmark-bg">
+      <section className="relative w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 py-xl overflow-hidden landmark-bg">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center relative z-10">
           <div className="space-y-8">
             <h1 className="font-h1 text-h1 text-on-background">Your Global Education Journey Starts Here</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[36rem]">
               Expert guidance for studying in the UK, USA, Canada, and Australia. We transform the complex application process into a seamless, premium experience.
             </p>
-            <div className="flex gap-4">
-              <button onClick={openModal} className="bg-primary text-primary-foreground px-8 py-4 rounded-DEFAULT font-bold hover:opacity-90 transition-opacity">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button onClick={openModal} className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-DEFAULT font-bold hover:opacity-90 transition-opacity">
                 Free Consultation
               </button>
-              <Link href="/destinations" className="inline-flex items-center justify-center border border-secondary text-secondary px-8 py-4 rounded-DEFAULT font-bold hover:bg-secondary-fixed transition-colors">
+              <Link href="/destinations" className="w-full sm:w-auto inline-flex items-center justify-center border border-secondary text-secondary px-8 py-4 rounded-DEFAULT font-bold hover:bg-secondary-fixed transition-colors">
                 Explore Destinations
               </Link>
             </div>
@@ -64,9 +64,14 @@ export default function Home() {
                 <div className="text-sm">Visa Prep Session</div>
               </div>
             </div>
-            {/* Hero Image Placeholder */}
-            <div className="absolute inset-0 bg-secondary-fixed rounded-2xl overflow-hidden z-10">
-              <img alt="University campus" className="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpRHlb3fBjqZWuPA0zsCOsGA91JG00UG7k6W0z68OWk7u5QdMquR61_yNaAAVAsKJgYk5kt6yZFWCiN7JhTC4SU6bTlReJ7AExaGiI3YaNcbLt8_lxXNtz_2wbcjUL_BjibTeMe0Tn16_nsyAuSLcSj13SUYoJdtvzkZjkmRgPFIarikW_a-6eCa0CzkLW7-scspSzXGzna6c3znjnA-GGT5EyIms57OSnB7r4695Y3-XkY9I9O-FxxaNAd5xdl2kgkMsv8KCj4hAx"/>
+            {/* Hero Image */}
+            <div className="absolute inset-0 rounded-2xl overflow-hidden z-10 shadow-2xl border border-white/10">
+              <div className="absolute inset-0 bg-gradient-to-tr from-[#003366]/30 to-[#FF6B00]/10 z-10 mix-blend-overlay"></div>
+              <img 
+                alt="International students on modern university campus" 
+                className="w-full h-full object-cover" 
+                src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=2070&q=80"
+              />
             </div>
           </div>
         </div>

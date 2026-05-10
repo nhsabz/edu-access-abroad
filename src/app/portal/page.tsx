@@ -54,12 +54,16 @@ export default function PortalPage() {
     router.push("/login");
   };
 
-  if (loading || !user) {
+  if (loading) {
     return (
       <div className="flex flex-1 items-center justify-center min-h-[50vh]">
-        <p className="text-on-surface-variant">Loading portal...</p>
+        <p className="text-on-surface-variant animate-pulse">Loading portal...</p>
       </div>
     );
+  }
+
+  if (!user) {
+    return null; // Next.js is redirecting in the useEffect
   }
 
   return (

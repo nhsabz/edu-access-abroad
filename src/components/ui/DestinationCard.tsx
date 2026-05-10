@@ -25,10 +25,16 @@ export function DestinationCard({
         <span className="material-symbols-outlined text-[150px]">{icon}</span>
       </div>
       <div className="flex justify-between items-start mb-6 relative z-10">
-        <h3 className="font-h2 text-h2 text-on-background flex items-center gap-3">
-          {country}
-          <img alt={`${country} Flag`} className="w-6 h-auto shadow-sm rounded-sm" src={flagUrl} />
-        </h3>
+        <div className="flex items-center gap-2 shrink-0">
+          <h3 className="font-h2 text-h2 text-on-background">
+            {country}
+          </h3>
+          <img 
+            src={flagUrl} 
+            alt={country} 
+            className="w-8 h-5 object-cover rounded-sm inline-block shrink-0 shadow-sm" 
+          />
+        </div>
         <span className="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-2 py-1 rounded-sm border border-surface-variant">
           {region}
         </span>

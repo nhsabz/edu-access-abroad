@@ -3,10 +3,12 @@
 import { useState } from 'react';
 import { DestinationCard } from '@/components/ui/DestinationCard';
 
+const getFlagUrl = (code: string) => `https://flagcdn.com/w40/${code.toLowerCase()}.png`;
+
 const DESTINATIONS = [
   {
     country: "USA",
-    flagUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBVtTNp3kXJiedhPDMOiEvlfXjgdl9vWRD-3q6T74EBAZyxKRlBZ6Q1gZMzic6jLFrfXK35DL10eGfpxWWZw8l6raOCvCllFvB1qLtmbRxK4aSbozFo9bAO2qjziO5zKOdVTQW_YKJQ8s161oAuMMKt6cY43vXRVv63is3o7Mgj8hm2O-I8lPHbE5btZtZQC29UXSuLfYXXoHQS8WK5EFFYIFcmXfFwC2Aw9OSr3ppOu0BM_zJmQKILfaT0dl1KiAdjEsrVe8VIhHki",
+    flagUrl: getFlagUrl("us"),
     region: "North America",
     avgTuition: "$20k - $50k/yr",
     workRights: "Up to 3 Years (STEM)",
@@ -15,7 +17,7 @@ const DESTINATIONS = [
   },
   {
     country: "Canada",
-    flagUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuD6PWrfIsR9mxb2OCPNl5Q5-r-UhU6JKkPzEJyxnruZMFMgbn5is5zDFnobdWTzlrj-4M1D4Xb3I3iHAjmsu6N_MctWrcexJFkXM4hHOex1ryLR1vS-vJWr1d5VT8B9yiWKUiPplzjao1bwwLBHdog1LduCG0iPZ8KWLmxLViWJMTWtnZp2oNnwnnj0-hZ1kXdEP49VbZObl8V0AHmOyr7ukr15BQc32l4PtQhQOYKpsxki7vEOacrCHdRbFroiSPgrhlxRVqh1Fdv2",
+    flagUrl: getFlagUrl("ca"),
     region: "North America",
     avgTuition: "CAD $15k - $30k/yr",
     workRights: "Up to 3 Years (PGWP)",
@@ -24,7 +26,7 @@ const DESTINATIONS = [
   },
   {
     country: "Australia",
-    flagUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuBfP3gNfQUCpQmGwLxtf-8QtWTzZ0f-6iyQWbKoxYxFvQkytiPLfSWNZwpRlA7hB4VBZTqp6DW8AVEtMkDTaF3IjZytWFlAjRjnjbESW9fed6m-701nMKByTwxZNdkxlFxbekH1sfVk75WG6_IpabrdFud95x38GF2WdSFxJEHKk1Txa4TVVCPePV1sAjVLqsAQ1B5AogsFnov9e6MXg4lVMOUYUhQ7jvPgvc0t5AhkA85GvoLf7WxEYNfAi9G0YHXYS4-iCJwatEgl",
+    flagUrl: getFlagUrl("au"),
     region: "Oceania",
     avgTuition: "AUD $20k - $45k/yr",
     workRights: "2 - 4 Years",
@@ -33,7 +35,7 @@ const DESTINATIONS = [
   },
   {
     country: "Germany",
-    flagUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/2560px-Flag_of_Germany.svg.png",
+    flagUrl: getFlagUrl("de"),
     region: "Europe",
     avgTuition: "Free / Low (Public)",
     workRights: "18 Months",
@@ -42,7 +44,7 @@ const DESTINATIONS = [
   },
   {
     country: "Sweden",
-    flagUrl: "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/2560px-Flag_of_Sweden.svg.png",
+    flagUrl: getFlagUrl("se"),
     region: "Europe",
     avgTuition: "€8k - €15k/yr",
     workRights: "12 Months",
@@ -51,7 +53,7 @@ const DESTINATIONS = [
   },
   {
     country: "Netherlands",
-    flagUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/2560px-Flag_of_the_Netherlands.svg.png",
+    flagUrl: getFlagUrl("nl"),
     region: "Europe",
     avgTuition: "€8k - €20k/yr",
     workRights: "1 Year (Orientation Year)",
@@ -60,7 +62,7 @@ const DESTINATIONS = [
   },
   {
     country: "Finland",
-    flagUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/2560px-Flag_of_Finland.svg.png",
+    flagUrl: getFlagUrl("fi"),
     region: "Europe",
     avgTuition: "€10k - €18k/yr",
     workRights: "2 Years",
@@ -69,7 +71,7 @@ const DESTINATIONS = [
   },
   {
     country: "Denmark",
-    flagUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/2560px-Flag_of_Denmark.svg.png",
+    flagUrl: getFlagUrl("dk"),
     region: "Europe",
     avgTuition: "€10k - €16k/yr",
     workRights: "3 Years",
@@ -88,7 +90,7 @@ export default function DestinationsPage() {
 
   return (
     <>
-      <main className="max-w-[1280px] mx-auto px-8 py-xl">
+      <main className="w-full max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 py-xl overflow-hidden">
         {/* Header Section */}
         <section className="mb-lg text-center md:text-left">
           <h1 className="font-h1 text-h1 text-on-background mb-sm">Explore Global Destinations</h1>
@@ -118,10 +120,15 @@ export default function DestinationsPage() {
                   <p className="font-h3 text-h3 text-on-background">Up to 2 Years</p>
                 </div>
               </div>
-              <button className="bg-primary text-primary-foreground font-h3 text-h3 py-3 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity w-fit flex items-center gap-2">
+              <a 
+                href="https://discoveruni.gov.uk/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="relative z-20 cursor-pointer bg-primary text-primary-foreground font-h3 text-h3 py-3 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity w-fit flex items-center gap-2"
+              >
                 Explore UK Universities
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
-              </button>
+              </a>
             </div>
             {/* Image / Landmark Area */}
             <div className="relative bg-secondary-fixed hidden md:block overflow-hidden">
