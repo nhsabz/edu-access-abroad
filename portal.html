@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EduAccess Abroad - Student Portal</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container": "#eaeef0",
+                        "inverse-surface": "#2c3133",
+                        "on-primary-fixed-variant": "#6e3900",
+                        "on-background": "#181c1e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#324049",
+                        "on-secondary-container": "#294f83",
+                        "secondary-fixed": "#d5e3ff",
+                        "surface-container-high": "#e5e9eb",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#9dacb6",
+                        "on-tertiary-fixed-variant": "#3b4951",
+                        "on-surface-variant": "#564334",
+                        "on-secondary-fixed": "#001b3c",
+                        "error": "#ba1a1a",
+                        "primary-container": "#ff8c00",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#edf1f3",
+                        "background": "#f6fafc",
+                        "surface-tint": "#904d00",
+                        "surface-dim": "#d6dbdd",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#f6fafc",
+                        "on-tertiary-fixed": "#0f1d25",
+                        "surface-container-low": "#f0f4f6",
+                        "primary-fixed-dim": "#ffb77d",
+                        "surface-variant": "#dfe3e5",
+                        "tertiary-fixed-dim": "#bac9d3",
+                        "outline-variant": "#ddc1ae",
+                        "on-primary-container": "#623200",
+                        "secondary-fixed-dim": "#a7c8ff",
+                        "secondary": "#3a5f94",
+                        "surface-container-highest": "#dfe3e5",
+                        "primary": "#904d00",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#ffb77d",
+                        "outline": "#897362",
+                        "on-surface": "#181c1e",
+                        "primary-fixed": "#ffdcc3",
+                        "secondary-container": "#9fc2fe",
+                        "tertiary": "#526069",
+                        "surface": "#f6fafc",
+                        "tertiary-fixed": "#d6e5ef",
+                        "on-secondary-fixed-variant": "#1f477b",
+                        "on-primary-fixed": "#2f1500",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "xl": "80px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "md": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "h1": ["Inter"],
+                        "h2": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "h3": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["36px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "h3": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "label-caps": ["12px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .custom-shadow { box-shadow: 0px 4px 20px rgba(0, 51, 102, 0.08); }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased min-h-screen flex flex-col">
+<!-- TopAppBar (From JSON) -->
+<header class="fixed top-0 w-full z-50 border-b border-blue-50 dark:border-slate-800 shadow-[0px_4px_20px_rgba(0,51,102,0.08)] bg-white/90 dark:bg-slate-900/90 backdrop-blur-md">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-8 h-20">
+<!-- Brand -->
+<div class="text-xl font-bold text-blue-900 dark:text-blue-100 flex items-center gap-xs">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">public</span>
+                EduAccess Abroad
+            </div>
+<!-- Navigation Links -->
+<nav class="hidden md:flex gap-md font-inter text-sm font-semibold tracking-tight">
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors Active: opacity-80 duration-150" href="#">Services</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors Active: opacity-80 duration-150" href="#">Destinations</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors Active: opacity-80 duration-150" href="#">Scholarships</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors Active: opacity-80 duration-150" href="#">About Us</a>
+</nav>
+<!-- Trailing Action -->
+<button class="bg-primary-container text-on-primary-container font-h3 text-sm px-6 py-2 rounded-lg hover:opacity-90 transition-opacity">
+                Get Free Consultation
+            </button>
+</div>
+</header>
+<!-- Dashboard Layout -->
+<div class="flex flex-1 pt-20">
+<!-- Sidebar Navigation -->
+<aside class="w-64 bg-surface-container-lowest border-r border-surface-variant flex-shrink-0 hidden lg:flex flex-col py-lg px-md custom-shadow z-40">
+<div class="mb-xl px-sm">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-xs">STUDENT PORTAL</p>
+<h2 class="font-h3 text-h3 text-on-surface">My Dashboard</h2>
+</div>
+<nav class="flex flex-col gap-sm flex-1">
+<a class="flex items-center gap-sm px-sm py-2 rounded-lg bg-surface-container text-primary font-body-md text-body-md font-semibold" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Overview
+                </a>
+<a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">folder_open</span>
+                    Document Vault
+                </a>
+<a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">flight_takeoff</span>
+                    Applications
+                </a>
+<a class="flex items-center gap-sm px-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined">lightbulb</span>
+                    Recommendations
+                </a>
+</nav>
+<!-- Counselor Widget Mini -->
+<div class="mt-auto bg-surface-container-low rounded-xl p-sm flex items-center gap-sm cursor-pointer hover:bg-surface-container transition-colors">
+<img alt="Counselor" class="w-10 h-10 rounded-full object-cover border-2 border-surface-container-lowest" data-alt="headshot of a friendly female counselor wearing glasses in a brightly lit modern office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKNa98KcdXFLwzT5IW1uedlQ1y5ddGzDRXZm7dweE9Dh_Yw7f1712i-a2WTnBOCRg0kk_t264nHKu8TZdsJLdt-gbxw9pj9J6kDd1fvS8baVymbcxVs5A7SwN-b3IIdy6zS6n46EiJujlDs76h53ZGTTQ2aKs_cWJ3vFJbLGObQh7HQut_CTZjIgZA5bV9nbJgeY2k4Q_VXOhqjynK7aTbh0mYFceuqbT2jjrdDhk2KkI15JkSvDq6p0MGHiSCg3ifq0DaNaspHxrI"/>
+<div>
+<p class="font-body-md text-sm font-semibold text-on-surface">Sarah Jenkins</p>
+<p class="font-label-caps text-[10px] text-on-surface-variant flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-[#26D367] block"></span> Online
+                    </p>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 p-md lg:p-xl overflow-y-auto">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-lg gap-md">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface mb-xs">Welcome back, Alex.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Here is the latest update on your study abroad journey.</p>
+</div>
+<button class="flex items-center gap-xs bg-surface-container-lowest border border-outline-variant text-secondary px-4 py-2 rounded-lg shadow-sm hover:shadow-md transition-all font-body-md text-body-md">
+<span class="material-symbols-outlined">edit_document</span>
+                    Edit Profile
+                </button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-md lg:gap-lg">
+<!-- Application Tracker Card (Spans 2 cols) -->
+<div class="col-span-1 md:col-span-2 bg-surface-container-lowest rounded-xl custom-shadow p-md lg:p-lg border border-surface-variant flex flex-col relative overflow-hidden">
+<!-- Subtle Landmark Background -->
+<div class="absolute -bottom-10 -right-10 opacity-[0.03] pointer-events-none">
+<svg class="text-secondary" fill="none" height="200" stroke="currentColor" stroke-width="1" viewbox="0 0 24 24" width="200"><path d="M3 21h18M5 21V5a2 2 0 012-2h10a2 2 0 012 2v16M9 9h6M9 13h6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+</div>
+<div class="flex justify-between items-center mb-md relative z-10">
+<h3 class="font-h3 text-h3 text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-container">school</span>
+                            Active Applications
+                        </h3>
+<a class="text-secondary hover:text-secondary-fixed-variant font-body-md text-sm underline decoration-1 underline-offset-4" href="#">View All</a>
+</div>
+<div class="flex flex-col gap-sm relative z-10">
+<!-- App Item 1 -->
+<div class="flex items-center justify-between p-sm rounded-lg border border-outline-variant hover:border-[#E3F2FD] hover:shadow-sm transition-all bg-surface-bright">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-h3">UCL</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">University College London</p>
+<p class="font-body-md text-sm text-on-surface-variant">MSc Computer Science</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="bg-[#ff8c00]/10 text-[#904d00] px-3 py-1 rounded-full font-label-caps text-label-caps whitespace-nowrap">In Progress</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+<!-- App Item 2 -->
+<div class="flex items-center justify-between p-sm rounded-lg border border-outline-variant hover:border-[#E3F2FD] hover:shadow-sm transition-all bg-surface-bright">
+<div class="flex items-center gap-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container flex items-center justify-center text-secondary font-h3">UoT</div>
+<div>
+<p class="font-body-md text-body-md font-semibold text-on-surface">University of Toronto</p>
+<p class="font-body-md text-sm text-on-surface-variant">MSc Software Engineering</p>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<span class="bg-[#26D367]/10 text-[#1e8a46] px-3 py-1 rounded-full font-label-caps text-label-caps whitespace-nowrap">Accepted</span>
+<span class="material-symbols-outlined text-outline">chevron_right</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Document Vault Card -->
+<div class="col-span-1 bg-surface-container-lowest rounded-xl custom-shadow p-md lg:p-lg border border-surface-variant flex flex-col">
+<h3 class="font-h3 text-h3 text-on-surface mb-md flex items-center gap-sm">
+<span class="material-symbols-outlined text-secondary">inventory_2</span>
+                        Document Vault
+                    </h3>
+<!-- Dropzone -->
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-md text-center mb-md hover:border-secondary transition-colors cursor-pointer bg-surface-bright">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-xs">cloud_upload</span>
+<p class="font-body-md text-sm text-on-surface">Drag &amp; drop files or <span class="text-secondary font-semibold">browse</span></p>
+<p class="font-label-caps text-[10px] text-on-surface-variant mt-xs">PDF, JPG up to 10MB</p>
+</div>
+<!-- List -->
+<div class="flex flex-col gap-xs overflow-y-auto max-h-[150px] pr-2">
+<div class="flex items-center justify-between py-2 border-b border-surface-variant">
+<div class="flex items-center gap-xs text-on-surface font-body-md text-sm">
+<span class="material-symbols-outlined text-secondary text-sm">description</span>
+                                Official Transcript.pdf
+                            </div>
+<span class="material-symbols-outlined text-[#26D367] text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between py-2 border-b border-surface-variant">
+<div class="flex items-center gap-xs text-on-surface font-body-md text-sm">
+<span class="material-symbols-outlined text-secondary text-sm">badge</span>
+                                Passport Copy.jpg
+                            </div>
+<span class="material-symbols-outlined text-[#26D367] text-sm">check_circle</span>
+</div>
+<div class="flex items-center justify-between py-2">
+<div class="flex items-center gap-xs text-on-surface-variant font-body-md text-sm">
+<span class="material-symbols-outlined text-outline text-sm">pending_actions</span>
+                                IELTS Score Report
+                            </div>
+<span class="font-label-caps text-[10px] text-error bg-error-container px-2 py-0.5 rounded">Missing</span>
+</div>
+</div>
+</div>
+<!-- Personalized Recommendations (Spans full width on xl) -->
+<div class="col-span-1 md:col-span-2 xl:col-span-3 bg-surface-container-lowest rounded-xl custom-shadow p-md lg:p-lg border border-surface-variant">
+<div class="flex justify-between items-center mb-md">
+<h3 class="font-h3 text-h3 text-on-surface flex items-center gap-sm">
+<span class="material-symbols-outlined text-primary-container">explore</span>
+                            Recommended for You
+                        </h3>
+<div class="flex gap-xs">
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container"><span class="material-symbols-outlined text-sm">arrow_left</span></button>
+<button class="w-8 h-8 rounded-full border border-outline-variant flex items-center justify-center text-on-surface hover:bg-surface-container"><span class="material-symbols-outlined text-sm">arrow_right</span></button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Rec Card 1 -->
+<div class="rounded-xl overflow-hidden border border-surface-variant hover:shadow-md hover:border-[#E3F2FD] transition-all group cursor-pointer bg-surface-bright">
+<div class="h-32 bg-surface-container relative overflow-hidden">
+<img alt="University" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="classic university building with ivy climbing brick walls under a clear blue sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKivE-WwZx-QtF3stq-0XM9ZrMKHyDRAPnM6M6FV3TB3hDc4-fjvByBv3xylqUBtZtc9mZZULHNcy3yKgZkqPqIJmr00cn4BWNoFraGmQO3t0GovhlnFXSq_UpV6ocRKSHkdWgOfgOEADR9wd78z8MVyZnaWeT5oUYIM64aJYZunEs7hmjNe7_SqpnETwZJnWO-UpHTlDc37rdIGQk5ZkGQWSAJw67d0de1CjKojRpqpOcc_mRyI_SMEQw-UZNwxSEoLFmC1OhROfy"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur px-2 py-1 rounded font-label-caps text-[10px] text-on-surface font-bold shadow-sm">95% Match</div>
+</div>
+<div class="p-sm">
+<h4 class="font-body-md font-semibold text-on-surface truncate">University of Melbourne</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-sm">Australia • Top 50 Global</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-label-caps text-[10px]">No IELTS Req</span>
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-label-caps text-[10px]">Scholarship Avail</span>
+</div>
+</div>
+</div>
+<!-- Rec Card 2 -->
+<div class="rounded-xl overflow-hidden border border-surface-variant hover:shadow-md hover:border-[#E3F2FD] transition-all group cursor-pointer bg-surface-bright hidden md:block">
+<div class="h-32 bg-surface-container relative overflow-hidden">
+<img alt="University" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="modern glass university building reflecting sunlight with students walking in the courtyard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAVAq_yeZovrxiF4HFdMeEOcwrYlZhQuJl0CBNzqxdrF5WuizTlWzc-7t-ZwL3QclnYMfoglGEGvu_bK80XWZiCdp09rXrmWpg2XaQ6YYeCIwCtMr5yui7U8_Lkz2a8GLEwLxzoo_VHKuoGIdFTmKIEDPjzOjG99ftdGO6EeJ76JSMuUVBKYVSACNSDTKDz0-Y3ZADlo_rNddp4cgPObrxKUJ9qUMqlx0La3KV3pbijGp0_bcirr2rgcMzHb9rk-cx0wmaZhIcrppk"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur px-2 py-1 rounded font-label-caps text-[10px] text-on-surface font-bold shadow-sm">88% Match</div>
+</div>
+<div class="p-sm">
+<h4 class="font-body-md font-semibold text-on-surface truncate">NUS Singapore</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-sm">Singapore • Tech Hub</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-label-caps text-[10px]">Fast Track</span>
+</div>
+</div>
+</div>
+<!-- Rec Card 3 -->
+<div class="rounded-xl overflow-hidden border border-surface-variant hover:shadow-md hover:border-[#E3F2FD] transition-all group cursor-pointer bg-surface-bright hidden lg:block">
+<div class="h-32 bg-surface-container relative overflow-hidden">
+<img alt="University" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="historic european campus quadrangle with green lawns and gothic architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKWzZxpw_OYazzj5buNyIcnlIFxArrrwJ41WRa20YGY5CdfzQS5KDX46WQb0VEEJ7V90W9nqubxksJ3tTQ9tdqsE2SuWeDOsPMDdLfR76VYL1nE393Xdky5kVVydq1Q3Fjz1QDJEgC_CWEZvcYf5jV2N0mUAgeR41jGNB_hRTK2s10Zg5QoWAE7nIy6k4QLvWMylIJsEsELtyCk52d_Hr08WEQx5EuT5RjPn0gukOMeytY4OWkXOfL21VHlPArS6bG6yhKeMlqVShs"/>
+<div class="absolute top-2 right-2 bg-surface-container-lowest/90 backdrop-blur px-2 py-1 rounded font-label-caps text-[10px] text-on-surface font-bold shadow-sm">82% Match</div>
+</div>
+<div class="p-sm">
+<h4 class="font-body-md font-semibold text-on-surface truncate">Trinity College</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-sm">Ireland • High Employability</p>
+<div class="flex flex-wrap gap-xs">
+<span class="bg-surface-container text-on-surface-variant px-2 py-0.5 rounded font-label-caps text-[10px]">Work Visa</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

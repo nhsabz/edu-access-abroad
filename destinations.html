@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations - EduAccess Abroad</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "surface-container": "#eaeef0",
+                            "inverse-surface": "#2c3133",
+                            "on-primary-fixed-variant": "#6e3900",
+                            "on-background": "#181c1e",
+                            "surface-container-lowest": "#ffffff",
+                            "on-tertiary-container": "#324049",
+                            "on-secondary-container": "#294f83",
+                            "secondary-fixed": "#d5e3ff",
+                            "surface-container-high": "#e5e9eb",
+                            "on-secondary": "#ffffff",
+                            "tertiary-container": "#9dacb6",
+                            "on-tertiary-fixed-variant": "#3b4951",
+                            "on-surface-variant": "#564334",
+                            "on-secondary-fixed": "#001b3c",
+                            "error": "#ba1a1a",
+                            "primary-container": "#ff8c00",
+                            "on-error-container": "#93000a",
+                            "on-error": "#ffffff",
+                            "inverse-on-surface": "#edf1f3",
+                            "background": "#f6fafc",
+                            "surface-tint": "#904d00",
+                            "surface-dim": "#d6dbdd",
+                            "on-tertiary": "#ffffff",
+                            "surface-bright": "#f6fafc",
+                            "on-tertiary-fixed": "#0f1d25",
+                            "surface-container-low": "#f0f4f6",
+                            "primary-fixed-dim": "#ffb77d",
+                            "surface-variant": "#dfe3e5",
+                            "tertiary-fixed-dim": "#bac9d3",
+                            "outline-variant": "#ddc1ae",
+                            "on-primary-container": "#623200",
+                            "secondary-fixed-dim": "#a7c8ff",
+                            "secondary": "#3a5f94",
+                            "surface-container-highest": "#dfe3e5",
+                            "primary": "#904d00",
+                            "on-primary": "#ffffff",
+                            "inverse-primary": "#ffb77d",
+                            "outline": "#897362",
+                            "on-surface": "#181c1e",
+                            "primary-fixed": "#ffdcc3",
+                            "secondary-container": "#9fc2fe",
+                            "tertiary": "#526069",
+                            "surface": "#f6fafc",
+                            "tertiary-fixed": "#d6e5ef",
+                            "on-secondary-fixed-variant": "#1f477b",
+                            "on-primary-fixed": "#2f1500",
+                            "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "lg": "48px",
+                            "xl": "80px",
+                            "sm": "12px",
+                            "xs": "4px",
+                            "gutter": "24px",
+                            "container-max": "1280px",
+                            "md": "24px",
+                            "base": "8px"
+                    },
+                    "fontFamily": {
+                            "h1": [
+                                    "Inter"
+                            ],
+                            "h2": [
+                                    "Inter"
+                            ],
+                            "body-lg": [
+                                    "Inter"
+                            ],
+                            "h3": [
+                                    "Inter"
+                            ],
+                            "label-caps": [
+                                    "Inter"
+                            ],
+                            "body-md": [
+                                    "Inter"
+                            ]
+                    },
+                    "fontSize": {
+                            "h1": [
+                                    "48px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "-0.02em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "h2": [
+                                    "36px",
+                                    {
+                                            "lineHeight": "1.2",
+                                            "letterSpacing": "-0.01em",
+                                            "fontWeight": "700"
+                                    }
+                            ],
+                            "body-lg": [
+                                    "18px",
+                                    {
+                                            "lineHeight": "1.6",
+                                            "fontWeight": "400"
+                                    }
+                            ],
+                            "h3": [
+                                    "24px",
+                                    {
+                                            "lineHeight": "1.3",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "label-caps": [
+                                    "12px",
+                                    {
+                                            "lineHeight": "1.0",
+                                            "letterSpacing": "0.05em",
+                                            "fontWeight": "600"
+                                    }
+                            ],
+                            "body-md": [
+                                    "16px",
+                                    {
+                                            "lineHeight": "1.5",
+                                            "fontWeight": "400"
+                                    }
+                            ]
+                    }
+            },
+                },
+            }
+    </script>
+<style>
+        .ambient-shadow-level-1 {
+            box-shadow: 0px 4px 20px rgba(0, 51, 102, 0.08);
+        }
+        .hover-lift:hover {
+            transform: translateY(-2px);
+            box-shadow: 0px 8px 24px rgba(0, 51, 102, 0.12);
+            border-color: #E3F2FD;
+        }
+        .landmark-watermark {
+            opacity: 0.05;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen pt-[80px]">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border-b border-blue-50 dark:border-slate-800 shadow-[0px_4px_20px_rgba(0,51,102,0.08)]">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-8 h-20">
+<div class="text-xl font-bold text-blue-900 dark:text-blue-100 font-h2 text-h2 tracking-tight">
+                EduAccess Abroad
+            </div>
+<nav class="hidden md:flex gap-8 items-center font-inter text-sm font-semibold tracking-tight">
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors opacity-80 duration-150" href="#">Services</a>
+<a class="text-orange-600 dark:text-orange-400 border-b-2 border-orange-500 pb-1 opacity-80 duration-150" href="#">Destinations</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors opacity-80 duration-150" href="#">Scholarships</a>
+<a class="text-blue-900 dark:text-slate-300 hover:text-orange-500 dark:hover:text-orange-300 transition-colors opacity-80 duration-150" href="#">About Us</a>
+</nav>
+<button class="bg-primary-container text-on-primary-container font-h3 text-h3 py-sm px-md rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-colors text-sm whitespace-nowrap hidden md:block">
+                Get Free Consultation
+            </button>
+<button class="md:hidden text-blue-900">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-8 py-xl">
+<!-- Header Section -->
+<section class="mb-lg text-center md:text-left">
+<h1 class="font-h1 text-h1 text-on-background mb-sm">Explore Global Destinations</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover top universities, compare tuition fees, and explore post-study opportunities across the world's most sought-after study locations.</p>
+</section>
+<!-- Featured Destination Hero (UK) -->
+<section class="mb-xl relative bg-surface-container-lowest rounded-xl overflow-hidden ambient-shadow-level-1 border border-transparent hover:border-secondary-fixed transition-colors duration-300 group">
+<div class="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
+<!-- Content Area -->
+<div class="p-xl flex flex-col justify-center relative z-10 bg-surface-container-lowest">
+<div class="mb-md">
+<span class="inline-block bg-primary-container text-on-primary-container font-label-caps text-label-caps py-xs px-sm rounded-full mb-sm">Featured Destination</span>
+<h2 class="font-h1 text-h1 text-on-background mb-xs flex items-center gap-sm">
+                            United Kingdom
+                            <img alt="UK Flag" class="w-8 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqY9ScdP8gc0hSuBX7hzW4FBwDdXwXVLBAjwqOVL8hbk0EumTt0hrdIvfsXEHJ1wJotPDcj_6PyE7JW-tjVf06gQO48jCSZ19Iw3w4PyBENEa8VjY8f6vfSBKZTvbU8y2MS5RKMlIFt5xOWz4S7YQV3URDnGVSNXVW7I_waCiMqMJZHH3ZXZnvhhzTS0zFdaJ51tBn7tt-33ZqjEfFSEwcKwYjkr-W2WOSI42AzeZiW9hzbLq7ADLffBoTnQMhYMfLsbqMHu2cgWk7"/>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Experience world-class education steeped in history, with cutting-edge research facilities and vibrant student cities.</p>
+</div>
+<div class="grid grid-cols-2 gap-md mb-lg">
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Avg. Tuition</p>
+<p class="font-h3 text-h3 text-on-background">£15k - £35k / yr</p>
+</div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Post-Study Work</p>
+<p class="font-h3 text-h3 text-on-background">Up to 2 Years</p>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-h3 text-h3 py-sm px-lg rounded-DEFAULT hover:bg-surface-tint transition-colors w-fit flex items-center gap-xs">
+                        Explore UK Universities
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Image / Landmark Area -->
+<div class="relative bg-secondary-fixed hidden md:block overflow-hidden">
+<!-- Placeholder for actual image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="high quality photo of London Big Ben and parliament building at sunset with warm golden hour lighting and clear sky" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPiQ909nnZb-U9piMPlwSTkCdcmd__qFp0uOMCxlj5rPz_iB-st7BEeS2rvhSUaHP6pILCcDZr_XYO8owHyZzVtJDz7LDN9AWGNv-3JB4R3_mlCSETfo77aexg7G_eRr_6ytIRRTIGiBQF5N3dZmo5kaCxdZYDAT5CJK-_Tvk0D8VdDsYBHVHlKJZOa6wCi-SLXP6_P9fWrG2v7EiDcLHHBf2N2wp8aec0JwF6Mahi3BdFGKyLQYxK1Q5gGtjn4MJhf86xQNKWQlHF');"></div>
+<!-- Gradient Overlay -->
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
+<!-- Minimalist Landmark Silhouette overlaying -->
+<div class="absolute bottom-0 right-0 w-64 h-64 landmark-watermark bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNMzAgOTBoNDBWMTBoLTQwdnoiIGZpbGw9IiMwMDEiLz48L3N2Zz4=')] bg-no-repeat bg-contain bg-bottom"></div>
+</div>
+</div>
+</section>
+<!-- Filters Section -->
+<section class="mb-lg">
+<div class="flex flex-wrap gap-sm items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider mr-xs">Filter By:</span>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-surface-variant text-on-surface font-body-md text-body-md py-xs pl-sm pr-lg rounded-DEFAULT focus:outline-none focus:border-secondary focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer">
+<option>Region (All)</option>
+<option>Europe</option>
+<option>North America</option>
+<option>Oceania</option>
+<option>Asia</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-surface-variant text-on-surface font-body-md text-body-md py-xs pl-sm pr-lg rounded-DEFAULT focus:outline-none focus:border-secondary focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer">
+<option>Tuition Fee (Any)</option>
+<option>Under $15k</option>
+<option>$15k - $30k</option>
+<option>Over $30k</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="relative">
+<select class="appearance-none bg-surface-container-lowest border border-surface-variant text-on-surface font-body-md text-body-md py-xs pl-sm pr-lg rounded-DEFAULT focus:outline-none focus:border-secondary focus:ring-2 focus:ring-primary/20 transition-all cursor-pointer">
+<option>Post-Study Work (Any)</option>
+<option>1+ Years</option>
+<option>2+ Years</option>
+<option>3+ Years</option>
+</select>
+<span class="material-symbols-outlined absolute right-sm top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<button class="ml-auto text-secondary font-label-caps text-label-caps flex items-center gap-xs hover:text-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="restart_alt">restart_alt</span>
+                    Clear Filters
+                </button>
+</div>
+</section>
+<!-- Destinations Grid (Bento style) -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<!-- Destination Card: USA -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow-level-1 hover-lift border border-transparent transition-all duration-300 relative overflow-hidden group cursor-pointer flex flex-col h-full">
+<!-- Watermark -->
+<div class="absolute -bottom-8 -right-8 w-48 h-48 landmark-watermark text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[150px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<h3 class="font-h2 text-h2 text-on-background flex items-center gap-sm">
+                        USA
+                        <img alt="USA Flag" class="w-6 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVtTNp3kXJiedhPDMOiEvlfXjgdl9vWRD-3q6T74EBAZyxKRlBZ6Q1gZMzic6jLFrfXK35DL10eGfpxWWZw8l6raOCvCllFvB1qLtmbRxK4aSbozFo9bAO2qjziO5zKOdVTQW_YKJQ8s161oAuMMKt6cY43vXRVv63is3o7Mgj8hm2O-I8lPHbE5btZtZQC29UXSuLfYXXoHQS8WK5EFFYIFcmXfFwC2Aw9OSr3ppOu0BM_zJmQKILfaT0dl1KiAdjEsrVe8VIhHki"/>
+</h3>
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-xs py-1 rounded-sm border border-surface-variant">North America</span>
+</div>
+<div class="space-y-sm mb-lg relative z-10 flex-grow">
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Avg. Tuition</span>
+<span class="font-h3 text-h3 text-on-background text-base">$20k - $50k/yr</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Work Rights</span>
+<span class="font-h3 text-h3 text-on-background text-base">Up to 3 Years (STEM)</span>
+</div>
+</div>
+<div class="relative z-10 mt-auto">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs">Top Universities</h4>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>MIT</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Stanford University</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Harvard University</li>
+</ul>
+</div>
+</div>
+<!-- Destination Card: Canada -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow-level-1 hover-lift border border-transparent transition-all duration-300 relative overflow-hidden group cursor-pointer flex flex-col h-full">
+<div class="absolute -bottom-8 -right-8 w-48 h-48 landmark-watermark text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[150px]" data-icon="park">park</span>
+</div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<h3 class="font-h2 text-h2 text-on-background flex items-center gap-sm">
+                        Canada
+                        <img alt="Canada Flag" class="w-6 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6PWrfIsR9mxb2OCPNl5Q5-r-UhU6JKkPzEJyxnruZMFMgbn5is5zDFnobdWTzlrj-4M1D4Xb3I3iHAjmsu6N_MctWrcexJFkXM4hHOex1ryLR1vS-vJWr1d5VT8B9yiWKUiPplzjao1bwwLBHdog1LduCG0iPZ8KWLmxLViWJMTWtnZp2oNnwnnj0-hZ1kXdEP49VbZObl8V0AHmOyr7ukr15BQc32l4PtQhQOYKpsxki7vEOacrCHdRbFroiSPgrhlxRVqh1Fdv2"/>
+</h3>
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-xs py-1 rounded-sm border border-surface-variant">North America</span>
+</div>
+<div class="space-y-sm mb-lg relative z-10 flex-grow">
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Avg. Tuition</span>
+<span class="font-h3 text-h3 text-on-background text-base">CAD $15k - $30k/yr</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Work Rights</span>
+<span class="font-h3 text-h3 text-on-background text-base">Up to 3 Years (PGWP)</span>
+</div>
+</div>
+<div class="relative z-10 mt-auto">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs">Top Universities</h4>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>University of Toronto</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>UBC</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>McGill University</li>
+</ul>
+</div>
+</div>
+<!-- Destination Card: Australia -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow-level-1 hover-lift border border-transparent transition-all duration-300 relative overflow-hidden group cursor-pointer flex flex-col h-full">
+<div class="absolute -bottom-8 -right-8 w-48 h-48 landmark-watermark text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[150px]" data-icon="sailing">sailing</span>
+</div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<h3 class="font-h2 text-h2 text-on-background flex items-center gap-sm">
+                        Australia
+                        <img alt="Australia Flag" class="w-6 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfP3gNfQUCpQmGwLxtf-8QtWTzZ0f-6iyQWbKoxYxFvQkytiPLfSWNZwpRlA7hB4VBZTqp6DW8AVEtMkDTaF3IjZytWFlAjRjnjbESW9fed6m-701nMKByTwxZNdkxlFxbekH1sfVk75WG6_IpabrdFud95x38GF2WdSFxJEHKk1Txa4TVVCPePV1sAjVLqsAQ1B5AogsFnov9e6MXg4lVMOUYUhQ7jvPgvc0t5AhkA85GvoLf7WxEYNfAi9G0YHXYS4-iCJwatEgl"/>
+</h3>
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-xs py-1 rounded-sm border border-surface-variant">Oceania</span>
+</div>
+<div class="space-y-sm mb-lg relative z-10 flex-grow">
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Avg. Tuition</span>
+<span class="font-h3 text-h3 text-on-background text-base">AUD $20k - $45k/yr</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Work Rights</span>
+<span class="font-h3 text-h3 text-on-background text-base">2 - 4 Years</span>
+</div>
+</div>
+<div class="relative z-10 mt-auto">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs">Top Universities</h4>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>University of Melbourne</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>UNSW Sydney</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>University of Sydney</li>
+</ul>
+</div>
+</div>
+<!-- Destination Card: Germany -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow-level-1 hover-lift border border-transparent transition-all duration-300 relative overflow-hidden group cursor-pointer flex flex-col h-full">
+<div class="absolute -bottom-8 -right-8 w-48 h-48 landmark-watermark text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[150px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<h3 class="font-h2 text-h2 text-on-background flex items-center gap-sm">
+                        Germany
+                        <img alt="Germany Flag" class="w-6 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4FmKwaZkK5xqG3d6gK8aNq7Mg7YFlHqrgdSPn1dB3lbF-y1hbnN0BCZn-m4_AqcMXfFLMTC7kQ8NmryedYpscXUuOGZEEgsCURuzm5jRBmev9WY-jQ_aAaUHvZVlL8w7YIhsniIFZbd2n-oNX4lNdudL65Dqlj--3J5VPNJtwtPIbpKm1_EChatLtGugw7qfMaorhvhrmGkq4AJfuSic7y8Fk5AbXrPBmJsY7dytTgoM19hRC4Fp2C3fxdGvUk4b_UsTgzBN971nq"/>
+</h3>
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-xs py-1 rounded-sm border border-surface-variant">Europe</span>
+</div>
+<div class="space-y-sm mb-lg relative z-10 flex-grow">
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Avg. Tuition</span>
+<span class="font-h3 text-h3 text-on-background text-base">Free / Low (Public)</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Work Rights</span>
+<span class="font-h3 text-h3 text-on-background text-base">18 Months</span>
+</div>
+</div>
+<div class="relative z-10 mt-auto">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs">Top Universities</h4>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>TUM (Munich)</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>LMU Munich</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Heidelberg University</li>
+</ul>
+</div>
+</div>
+<!-- Destination Card: Ireland -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow-level-1 hover-lift border border-transparent transition-all duration-300 relative overflow-hidden group cursor-pointer flex flex-col h-full">
+<div class="absolute -bottom-8 -right-8 w-48 h-48 landmark-watermark text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[150px]" data-icon="castle">castle</span>
+</div>
+<div class="flex justify-between items-start mb-md relative z-10">
+<h3 class="font-h2 text-h2 text-on-background flex items-center gap-sm">
+                        Ireland
+                        <img alt="Ireland Flag" class="w-6 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAT_Gt0WQGmwOIdusenel4IV7QiwZjOfcxuh-3VXGFCL1-PU4IN66lfEGdIpAMvm8j_Z270pqnV_HHr2geyaub4krX6OQfvId0njCdeuhl220coxp8WVIGs27d_OJrjRnvzvpDl7l5wiCMI2snaFe1IJoofotW1ibyfAHbcwGRUWFjL-5-ew-HGo6ZcVams57iHPbtUx69NqZYA2kfcFDrsACVl_-CYnZDLc09FswHeuMJWNmgNDcPasyzy2bKVTtP9pU0z70W0_z32"/>
+</h3>
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-xs py-1 rounded-sm border border-surface-variant">Europe</span>
+</div>
+<div class="space-y-sm mb-lg relative z-10 flex-grow">
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Avg. Tuition</span>
+<span class="font-h3 text-h3 text-on-background text-base">€10k - €25k/yr</span>
+</div>
+<div class="flex justify-between border-b border-surface-variant/50 pb-xs">
+<span class="font-body-md text-body-md text-on-surface-variant">Work Rights</span>
+<span class="font-h3 text-h3 text-on-background text-base">Up to 2 Years</span>
+</div>
+</div>
+<div class="relative z-10 mt-auto">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-xs">Top Universities</h4>
+<ul class="font-body-md text-body-md text-on-surface space-y-1">
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>Trinity College Dublin</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>University College Dublin</li>
+<li class="flex items-center gap-xs"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>University of Galway</li>
+</ul>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-16 px-8 border-t border-blue-100 dark:border-slate-800 transition-all duration-300 ease-in-out">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1280px] mx-auto">
+<div>
+<span class="text-lg font-black text-blue-900 dark:text-white mb-4 block">EduAccess Abroad</span>
+<p class="font-inter text-sm leading-relaxed text-blue-800/70 dark:text-slate-400 mt-xs">
+                    © 2024 EduAccess Abroad. Empowering Global Education.
+                </p>
+</div>
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
+<nav class="flex flex-col gap-sm font-inter text-sm leading-relaxed">
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">Student Counseling</a>
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">English Test Prep</a>
+</nav>
+<nav class="flex flex-col gap-sm font-inter text-sm leading-relaxed">
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">Visa Support</a>
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">Partner Universities</a>
+</nav>
+<nav class="flex flex-col gap-sm font-inter text-sm leading-relaxed">
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">Office Locations</a>
+<a class="text-blue-800/70 dark:text-slate-400 hover:text-orange-500 dark:hover:text-orange-300 underline decoration-2 underline-offset-4" href="#">Privacy Policy</a>
+</nav>
+</div>
+</div>
+</footer>
+</body></html>
