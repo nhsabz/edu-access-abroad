@@ -14,7 +14,7 @@ export default function Home() {
           <div className="space-y-8">
             <h1 className="font-h1 text-h1 text-on-background">Your Global Education Journey Starts Here</h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant max-w-[36rem]">
-              Expert guidance for studying in the UK, USA, Canada, and Australia. We transform the complex application process into a seamless, premium experience.
+              Expert guidance for studying in the UK, USA, Canada, Australia, Germany, Sweden, and other top European destinations. We transform the complex application process into a seamless, premium experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button onClick={openModal} className="w-full sm:w-auto bg-primary text-primary-foreground px-8 py-4 rounded-DEFAULT font-bold hover:opacity-90 transition-opacity">

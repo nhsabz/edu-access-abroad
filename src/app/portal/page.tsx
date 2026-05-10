@@ -20,7 +20,9 @@ export default function PortalPage() {
   const [fetchingApps, setFetchingApps] = useState(true);
 
   useEffect(() => {
+    console.log("PortalPage useEffect [user, loading]:", { user: user?.uid, loading });
     if (!loading && !user) {
+      console.log("PortalPage: No user found, redirecting to /login");
       router.push("/login");
     }
   }, [user, loading, router]);
@@ -53,6 +55,8 @@ export default function PortalPage() {
     await logout();
     router.push("/login");
   };
+
+  console.log("PortalPage render:", { user: user?.uid, loading });
 
   if (loading) {
     return (

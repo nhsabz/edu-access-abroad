@@ -27,11 +27,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log("AuthContext: initializing auth listener");
     const unsubscribe = onAuthStateChanged(auth, (user) => {
+      console.log("AuthContext onAuthStateChanged: user is", user ? user.uid : "null");
       setUser(user);
       setLoading(false);
     });
-    return unsubscribe;
+
+    return () => unsubscribe();
   }, []);
 
   const login = async (email: string, password: string) => {
