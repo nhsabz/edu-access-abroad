@@ -11,7 +11,7 @@ export function Footer() {
           <div>
             <span className="text-xl font-black text-blue-900 dark:text-white mb-6 block">EduAccess Abroad</span>
             <p className="font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400 mb-6">
-              Helping students achieve their global education dreams. We guide ambitious students to top-tier universities worldwide, providing expert support at every step of the journey.
+              Helping students achieve their European education dreams. We guide ambitious students to top-tier universities in Europe, providing expert support at every step of the journey.
             </p>
           </div>
 
@@ -19,9 +19,9 @@ export function Footer() {
           <div>
             <h4 className="font-bold text-foreground mb-6">Quick Links</h4>
             <ul className="space-y-3 font-inter text-sm leading-relaxed">
-              <li><Link className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="/services">Student Counseling</Link></li>
-              <li><a className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="https://ielts.org/" target="_blank" rel="noopener noreferrer">English Test Prep</a></li>
-              <li><Link className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="/services">Visa Support</Link></li>
+              <li><Link className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="/services">University & Course Selection</Link></li>
+              <li><Link className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="/services">Application & Scholarship Support</Link></li>
+              <li><Link className="text-slate-600 dark:text-slate-400 hover:text-orange-500 transition-colors" href="/services">Visa & Accommodation Guidance</Link></li>
             </ul>
           </div>
 
@@ -41,7 +41,7 @@ export function Footer() {
             <ul className="space-y-4 font-inter text-sm leading-relaxed text-slate-600 dark:text-slate-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 shrink-0 text-orange-500 mt-0.5" />
-                <span>149/A, 4th Floor, Baitush Sharaf Complex,<br/>Airport Road, Farmgate, Dhaka, Bangladesh</span>
+                <span>149/A, 5th Floor, Baitush Sharaf Complex,<br/>Airport Road, Farmgate, Dhaka, Bangladesh, 1200</span>
               </li>
               <li className="flex items-center gap-3">
                 <MessageCircle className="w-5 h-5 shrink-0 text-[#25D366]" />
