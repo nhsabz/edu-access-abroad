@@ -105,10 +105,9 @@ export function LeadForm() {
       <div>
         <label className="block mb-1">Service Interest</label>
         <select name="service" className="w-full border p-3 rounded">
-          <option>Student Counseling</option>
-          <option>English Test Prep</option>
-          <option>Admission Process</option>
-          <option>Visa Guidance</option>
+          <option>University & Course Selection</option>
+          <option>Application & Scholarship Support</option>
+          <option>Visa & Accommodation Guidance</option>
           <option>Other</option>
         </select>
       </div>

@@ -60,7 +60,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
         />
       </head>
-      <body className="min-h-full flex flex-col bg-background text-foreground pt-20 overflow-x-hidden">
+      <body className="min-h-full flex flex-col bg-background text-foreground pt-20 overflow-x-hidden" suppressHydrationWarning>
         <AuthProvider>
           <ConsultationModalProvider>
             <Navbar />

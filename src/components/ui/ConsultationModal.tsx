@@ -120,13 +120,16 @@ export function ConsultationModal({ isOpen, onClose }: ConsultationModalProps) {
                   className="w-full px-4 py-2.5 bg-surface border border-outline-variant rounded-lg font-body-md text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all"
                 >
                   <option value="">Select a destination</option>
-                  <option value="UK">United Kingdom</option>
-                  <option value="USA">United States</option>
-                  <option value="Canada">Canada</option>
-                  <option value="Australia">Australia</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Finland">Finland</option>
+                  <option value="Italy">Italy</option>
+                  <option value="Sweden">Sweden</option>
+                  <option value="Denmark">Denmark</option>
+                  <option value="Netherlands">Netherlands</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
+
 
               <div>
                 <label className="block font-label-caps text-label-caps text-on-surface mb-1" htmlFor="message">Message (Optional)</label>

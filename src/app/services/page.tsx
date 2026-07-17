@@ -25,8 +25,8 @@ export default function ServicesPage() {
                 <span className="material-symbols-outlined text-[32px] text-on-secondary-container">school</span>
               </div>
               <div>
-                <h2 className="font-h2 text-h2 text-on-background mb-2">Student Counseling</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant">Expert guidance to help you identify the right course and university that aligns with your career aspirations and academic profile.</p>
+                <h2 className="font-h2 text-h2 text-on-background mb-2">University & Course Selection</h2>
+                <p className="font-body-md text-body-md text-on-surface-variant">Expert guidance to help you identify the right European course and university that aligns with your career aspirations.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -80,8 +80,8 @@ export default function ServicesPage() {
                 <span className="material-symbols-outlined text-[32px] text-on-primary-fixed">menu_book</span>
               </div>
               <div>
-                <h2 className="font-h2 text-h2 text-on-background mb-2">English Test Prep</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant">Rigorous, targeted training programs for IELTS and TOEFL designed to help you achieve the required bands for your dream institution.</p>
+                <h2 className="font-h2 text-h2 text-on-background mb-2">Application & Scholarship Support</h2>
+                <p className="font-body-md text-body-md text-on-surface-variant">Comprehensive assistance with SOPs, motivation letters, CVs, and finding available scholarships in Europe.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -135,8 +135,8 @@ export default function ServicesPage() {
                 <span className="material-symbols-outlined text-[32px] text-on-secondary-container">assignment</span>
               </div>
               <div>
-                <h2 className="font-h2 text-h2 text-on-background mb-2">Admission Process</h2>
-                <p className="font-body-md text-body-md text-on-surface-variant">Meticulous management of your application components, ensuring your profile stands out to admissions committees.</p>
+                <h2 className="font-h2 text-h2 text-on-background mb-2">Visa & Accommodation Guidance</h2>
+                <p className="font-body-md text-body-md text-on-surface-variant">Meticulous management of your visa application and assistance in finding safe housing near your chosen European university.</p>
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

@@ -7,86 +7,173 @@ const getFlagUrl = (code: string) => `https://flagcdn.com/w40/${code.toLowerCase
 
 const DESTINATIONS = [
   {
-    country: "USA",
-    flagUrl: getFlagUrl("us"),
-    region: "North America",
-    avgTuition: "$20k - $50k/yr",
-    workRights: "Up to 3 Years (STEM)",
-    topUniversities: ["MIT", "Stanford University", "Harvard University"],
-    icon: "account_balance"
-  },
-  {
-    country: "Canada",
-    flagUrl: getFlagUrl("ca"),
-    region: "North America",
-    avgTuition: "CAD $15k - $30k/yr",
-    workRights: "Up to 3 Years (PGWP)",
-    topUniversities: ["University of Toronto", "UBC", "McGill University"],
-    icon: "park"
-  },
-  {
-    country: "Australia",
-    flagUrl: getFlagUrl("au"),
-    region: "Oceania",
-    avgTuition: "AUD $20k - $45k/yr",
-    workRights: "2 - 4 Years",
-    topUniversities: ["University of Melbourne", "UNSW Sydney", "University of Sydney"],
-    icon: "sailing"
-  },
-  {
     country: "Germany",
     flagUrl: getFlagUrl("de"),
-    region: "Europe",
-    avgTuition: "Free / Low (Public)",
-    workRights: "18 Months",
-    topUniversities: ["TUM", "LMU Munich", "Heidelberg"],
-    icon: "castle"
-  },
-  {
-    country: "Sweden",
-    flagUrl: getFlagUrl("se"),
-    region: "Europe",
-    avgTuition: "€8k - €15k/yr",
-    workRights: "12 Months",
-    topUniversities: ["Lund University", "KTH Royal Institute", "Uppsala University"],
-    icon: "water"
-  },
-  {
-    country: "Netherlands",
-    flagUrl: getFlagUrl("nl"),
-    region: "Europe",
-    avgTuition: "€8k - €20k/yr",
-    workRights: "1 Year (Orientation Year)",
-    topUniversities: ["University of Amsterdam", "Delft University", "Wageningen"],
-    icon: "directions_bike"
+    avgTuition: "€0–500/semester",
+    workRights: "20 hrs/week",
+    postStudy: "18-month job-seeker",
+    prPathway: "5 years",
+    badge: "🏆 Free Tuition Available"
   },
   {
     country: "Finland",
     flagUrl: getFlagUrl("fi"),
-    region: "Europe",
-    avgTuition: "€10k - €18k/yr",
-    workRights: "2 Years",
-    topUniversities: ["University of Helsinki", "Aalto University", "University of Turku"],
-    icon: "ac_unit"
+    avgTuition: "€10,000–18,000 / year",
+    workRights: "Unlimited",
+    postStudy: "2-year permit",
+    prPathway: "4 years",
+    badge: "Safe & Highly Ranked"
+  },
+  {
+    country: "Italy",
+    flagUrl: getFlagUrl("it"),
+    avgTuition: "€1,000–4,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "1-year job-search",
+    prPathway: "5 years",
+    badge: "Low Tuition + Culture"
+  },
+  {
+    country: "Sweden",
+    flagUrl: getFlagUrl("se"),
+    avgTuition: "€8,000–15,000 / year",
+    workRights: "Unlimited",
+    postStudy: "12-month permit",
+    prPathway: "5 years",
+    badge: "Strong Job Market"
   },
   {
     country: "Denmark",
     flagUrl: getFlagUrl("dk"),
-    region: "Europe",
-    avgTuition: "€10k - €16k/yr",
-    workRights: "3 Years",
-    topUniversities: ["University of Copenhagen", "Aarhus University", "DTU"],
-    icon: "waves"
+    avgTuition: "€10,000–16,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "3-year permit",
+    prPathway: "5 years",
+    badge: "Highest EU Salaries"
+  },
+  {
+    country: "Austria",
+    flagUrl: getFlagUrl("at"),
+    avgTuition: "€726–1,500 / semester",
+    workRights: "20 hrs/week",
+    postStudy: "12-month job-seeker",
+    prPathway: "Red-White-Red Card",
+    badge: "Very Low Tuition"
+  },
+  {
+    country: "Czech Republic",
+    flagUrl: getFlagUrl("cz"),
+    avgTuition: "€1,000–5,000 / year",
+    workRights: "During studies",
+    postStudy: "Job-seeker available",
+    prPathway: "5 years",
+    badge: "Very Affordable"
+  },
+  {
+    country: "Poland",
+    flagUrl: getFlagUrl("pl"),
+    avgTuition: "€2,000–4,000 / year",
+    workRights: "Part-time allowed",
+    postStudy: "Post-study permit",
+    prPathway: "5 years",
+    badge: "Budget-Friendly"
+  },
+  {
+    country: "Croatia",
+    flagUrl: getFlagUrl("hr"),
+    avgTuition: "€1,500–4,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "Stay permit",
+    prPathway: "5 years",
+    badge: "Hidden Gem"
+  },
+  {
+    country: "Malta",
+    flagUrl: getFlagUrl("mt"),
+    avgTuition: "€5,000–9,000 / year",
+    workRights: "During study",
+    postStudy: "EU residency path",
+    prPathway: "EU pathway",
+    badge: "English-First EU"
+  },
+  {
+    country: "Ireland",
+    flagUrl: getFlagUrl("ie"),
+    avgTuition: "€10,000–25,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "2-year stay back",
+    prPathway: "5 years",
+    badge: "English-Speaking"
+  },
+  {
+    country: "Netherlands",
+    flagUrl: getFlagUrl("nl"),
+    avgTuition: "€8,000–20,000 / year",
+    workRights: "16 hrs/week",
+    postStudy: "1-year orientation",
+    prPathway: "5 years",
+    badge: "Innovation Hub"
+  },
+  {
+    country: "France",
+    flagUrl: getFlagUrl("fr"),
+    avgTuition: "€3,000–10,000 / year",
+    workRights: "964 hrs/year",
+    postStudy: "APS job-search",
+    prPathway: "5 years",
+    badge: "Low Public Tuition"
+  },
+  {
+    country: "Hungary",
+    flagUrl: getFlagUrl("hu"),
+    avgTuition: "€2,000–6,000 / year",
+    workRights: "During studies",
+    postStudy: "Job-seeker",
+    prPathway: "3 years",
+    badge: "🎓 Scholarships Available"
+  },
+  {
+    country: "Norway",
+    flagUrl: getFlagUrl("no"),
+    avgTuition: "€0 / year (public)",
+    workRights: "20 hrs/week",
+    postStudy: "Job-seeker available",
+    prPathway: "3 years",
+    badge: "Free Tuition Available"
+  },
+  {
+    country: "Belgium",
+    flagUrl: getFlagUrl("be"),
+    avgTuition: "€4,000–9,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "Unlimited search",
+    prPathway: "5 years",
+    badge: "Central Europe Hub"
+  },
+  {
+    country: "Spain",
+    flagUrl: getFlagUrl("es"),
+    avgTuition: "€1,500–7,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "1-year job-search",
+    prPathway: "5 years",
+    badge: "Affordable & Sunny"
+  },
+  {
+    country: "Portugal",
+    flagUrl: getFlagUrl("pt"),
+    avgTuition: "€1,000–4,000 / year",
+    workRights: "20 hrs/week",
+    postStudy: "1-year job-search",
+    prPathway: "5 years",
+    badge: "Fastest-Growing EU"
   }
 ];
 
 export default function DestinationsPage() {
   const [regionFilter, setRegionFilter] = useState("All");
 
-  const filteredDestinations = DESTINATIONS.filter(dest => {
-    if (regionFilter === "All") return true;
-    return dest.region === regionFilter;
-  });
+  const filteredDestinations = DESTINATIONS; // removed region filter as all are Europe
 
   return (
     <>
@@ -97,7 +184,7 @@ export default function DestinationsPage() {
           <p className="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">Discover top universities, compare tuition fees, and explore post-study opportunities across the world's most sought-after study locations.</p>
         </section>
 
-        {/* Featured Destination Hero (UK) */}
+        {/* Featured Destination Hero (Germany) */}
         <section className="mb-xl relative bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(0,51,102,0.08)] border border-transparent hover:border-secondary-fixed transition-colors duration-300 group">
           <div className="grid grid-cols-1 md:grid-cols-2 min-h-[400px]">
             {/* Content Area */}
@@ -105,34 +192,34 @@ export default function DestinationsPage() {
               <div className="mb-md">
                 <span className="inline-block bg-primary-container text-on-primary-container font-label-caps text-label-caps py-xs px-sm rounded-full mb-sm">Featured Destination</span>
                 <h2 className="font-h1 text-h1 text-on-background mb-xs flex items-center gap-sm">
-                  United Kingdom
-                  <img alt="UK Flag" className="w-8 h-auto shadow-sm rounded-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqY9ScdP8gc0hSuBX7hzW4FBwDdXwXVLBAjwqOVL8hbk0EumTt0hrdIvfsXEHJ1wJotPDcj_6PyE7JW-tjVf06gQO48jCSZ19Iw3w4PyBENEa8VjY8f6vfSBKZTvbU8y2MS5RKMlIFt5xOWz4S7YQV3URDnGVSNXVW7I_waCiMqMJZHH3ZXZnvhhzTS0zFdaJ51tBn7tt-33ZqjEfFSEwcKwYjkr-W2WOSI42AzeZiW9hzbLq7ADLffBoTnQMhYMfLsbqMHu2cgWk7"/>
+                  Germany
+                  <img alt="Germany Flag" className="w-8 h-auto shadow-sm rounded-sm" src="https://flagcdn.com/w40/de.png"/>
                 </h2>
-                <p className="font-body-lg text-body-lg text-on-surface-variant">Experience world-class education steeped in history, with cutting-edge research facilities and vibrant student cities.</p>
+                <p className="font-body-lg text-body-lg text-on-surface-variant">Experience world-class education with free or low tuition, cutting-edge research facilities, and a strong economy.</p>
               </div>
               <div className="grid grid-cols-2 gap-md mb-lg">
                 <div>
                   <p className="font-label-caps text-label-caps text-on-surface-variant uppercase">Avg. Tuition</p>
-                  <p className="font-h3 text-h3 text-on-background">£15k - £35k / yr</p>
+                  <p className="font-h3 text-h3 text-on-background">Free / Low (Public)</p>
                 </div>
                 <div>
                   <p className="font-label-caps text-label-caps text-on-surface-variant uppercase">Post-Study Work</p>
-                  <p className="font-h3 text-h3 text-on-background">Up to 2 Years</p>
+                  <p className="font-h3 text-h3 text-on-background">18 Months</p>
                 </div>
               </div>
               <a 
-                href="https://discoveruni.gov.uk/" 
+                href="https://www.study-in-germany.de/en/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="relative z-20 cursor-pointer bg-primary text-primary-foreground font-h3 text-h3 py-3 px-6 rounded-DEFAULT hover:opacity-90 transition-opacity w-fit flex items-center gap-2"
               >
-                Explore UK Universities
+                Explore German Universities
                 <span className="material-symbols-outlined text-sm">arrow_forward</span>
               </a>
             </div>
             {/* Image / Landmark Area */}
             <div className="relative bg-secondary-fixed hidden md:block overflow-hidden">
-              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPiQ909nnZb-U9piMPlwSTkCdcmd__qFp0uOMCxlj5rPz_iB-st7BEeS2rvhSUaHP6pILCcDZr_XYO8owHyZzVtJDz7LDN9AWGNv-3JB4R3_mlCSETfo77aexg7G_eRr_6ytIRRTIGiBQF5N3dZmo5kaCxdZYDAT5CJK-_Tvk0D8VdDsYBHVHlKJZOa6wCi-SLXP6_P9fWrG2v7EiDcLHHBf2N2wp8aec0JwF6Mahi3BdFGKyLQYxK1Q5gGtjn4MJhf86xQNKWQlHF')" }}></div>
+              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1599946347371-68eb71b16afc?auto=format&fit=crop&w=2070&q=80')" }}></div>
               <div className="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/50 to-transparent"></div>
             </div>
           </div>
@@ -186,11 +273,11 @@ export default function DestinationsPage() {
               key={i}
               country={dest.country}
               flagUrl={dest.flagUrl}
-              region={dest.region}
+              badge={dest.badge}
               avgTuition={dest.avgTuition}
               workRights={dest.workRights}
-              topUniversities={dest.topUniversities}
-              icon={dest.icon}
+              postStudy={dest.postStudy}
+              prPathway={dest.prPathway}
             />
           ))}
         </section>
