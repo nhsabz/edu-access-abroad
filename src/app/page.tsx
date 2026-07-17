@@ -45,35 +45,6 @@ export default function Home() {
             </div>
           </div>
           <div className="relative h-[600px] hidden lg:block">
-            {/* Floating UI Cards */}
-            <div className="absolute top-8 right-4 lg:right-8 bg-surface-container-lowest p-5 lg:p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.12)] z-20 w-64 lg:w-72 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-[#26D367]/10 rounded-full flex items-center justify-center text-[#26D367] shrink-0">
-                  <span className="material-symbols-outlined">check_circle</span>
-                </div>
-                <div>
-                  <div className="font-bold text-on-background text-sm lg:text-base">Application Accepted</div>
-                  <div className="text-xs lg:text-sm text-on-surface-variant">TUM (Germany)</div>
-                </div>
-              </div>
-              <div className="w-full bg-surface-container h-2 rounded-full overflow-hidden">
-                <div className="w-full h-full bg-[#26D367]"></div>
-              </div>
-            </div>
-            
-            <div className="absolute bottom-8 left-4 lg:left-8 bg-surface-container-lowest p-5 lg:p-6 rounded-xl shadow-[0px_4px_20px_rgba(0,51,102,0.12)] z-20 w-64 lg:w-80 transform hover:-translate-y-1 transition-transform border border-transparent hover:border-secondary-fixed">
-              <div className="font-bold text-on-background mb-2 text-sm lg:text-base">Upcoming Interview</div>
-              <div className="flex items-center gap-2 text-on-surface-variant text-xs lg:text-sm mb-4">
-                <span className="material-symbols-outlined text-sm lg:text-base">calendar_today</span>
-                Oct 24, 10:00 AM EST
-              </div>
-              <div className="flex items-center gap-3">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary shrink-0">
-                  <span className="material-symbols-outlined text-sm lg:text-base">video_camera_front</span>
-                </div>
-                <div className="text-xs lg:text-sm">Visa Prep Session</div>
-              </div>
-            </div>
             {/* Hero Image */}
             <div className="absolute inset-0 rounded-2xl overflow-hidden z-10 shadow-2xl border border-white/10">
               <div className="absolute inset-0 bg-gradient-to-tr from-[#003366]/30 to-[#FF6B00]/10 z-10 mix-blend-overlay"></div>
